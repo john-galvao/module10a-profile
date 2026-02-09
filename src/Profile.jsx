@@ -20,13 +20,14 @@ function Profile(props) {
         fontFamily: "Arial, sans-serif",
         textAlign: "center",
         backgroundColor: "white",
+        color: "#222"
       }}
     >
-      <h1>{name}</h1>
+      <h1 style={{ margin: "0 0 10px 0" }}>{name}</h1>
 
-      <p style={{ color: "#555" }}>{occupation}</p>
+      <p style={{ color: "#555", margin: "0 0 12px 0" }}>{occupation}</p>
 
-      <p>
+      <p style={{ margin: "0 0 16px 0" }}>
         <strong>Fun fact:</strong> {funFact}
       </p>
 
@@ -44,7 +45,11 @@ function Profile(props) {
         {showDetail ? "Hide Spotlight" : "Show Spotlight"}
       </button>
 
-      {showDetail && <p style={{ marginTop: "16px" }}>{detail}</p>}
+      {showDetail && (
+        <p style={{ marginTop: "16px", color: "#222" }}>
+          {detail}
+        </p>
+      )}
     </div>
   );
 }
